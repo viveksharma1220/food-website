@@ -1,0 +1,290 @@
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+/* navigation bar */
+
+
+/*navigation bar : logo and image  */
+#logo{
+ margin: 14px 38px;
+}
+#logo img{
+    height: 79px;
+ margin: -6px -12px;
+}
+
+/*navigation bar : list styling */
+#navbar{
+        display: flex;
+        align-items: center;
+    position:relative;
+    top: 0px;
+}
+
+#navbar:before{
+    content:"";
+    background-color: #dbdba1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height:100% ;
+    width:100% ;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Alegreya Sans SC', sans-serif;
+   
+}
+#navbar ul li{
+    /* color: white; */
+    list-style: none;
+ font-size: 1.3rem;
+ font-weight: 500;
+
+}
+#navbar ul li a{
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    
+}
+#navbar ul li a:hover{
+    color: rgb(110 85 218);
+
+    text-shadow:  11px 7px 20px #f7de79;
+    transition-duration: 200ms;
+    /* text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 20px #ffcc00; */
+    
+}
+/* home section  */
+
+#home{
+display: flex;
+flex-direction: column;
+padding: 3px 200px;
+justify-content: center;
+align-items: center;
+height: 661px;
+}
+
+#home::before{
+    content:"";
+    background: url('back1.webp') no-repeat center center/cover;
+    position: absolute;
+    height:100% ;
+    width:100% ;
+    z-index: -1;
+    opacity: 0.7;
+    top: 0px;
+    left: 0px;
+}
+#home h1{
+    color: rgb(9 95 121);
+    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 6.3rem;
+   
+}
+
+
+#home p{
+    color:rgb(238 202 253);
+    text-align: center;
+    font-size: 1.5rem;
+   text-shadow:  1px 1px 16px #000000;
+    font-family: 'Courgette';
+    
+}
+
+
+/* services section  */
+#services{
+    background-color: #fff2f2;
+}
+ #services{
+  margin: 34px;
+  display: flex;
+
+ }
+
+.services-container h1{
+    color: #794d55;
+    text-shadow:  3px 3px 30px #000000
+}
+
+#services .box{
+border: 2px solid rgb(234 212 212); 
+margin:10px ;
+border-radius: 20px;
+padding:3px 4px ;
+background-color: rgb(255, 255, 255);
+animation: shadowAnimation 3s linear infinite;
+
+ }
+
+     @keyframes shadowAnimation {
+        0% {
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        }
+        50% {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        100% {
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+        }
+      }
+ #services .box img{
+   height: 160px;
+     margin: auto;
+     display: block;
+     transition: transform 0.3s ease-in-out;
+     }
+
+     #services .box img:hover{
+        transform: scale(0.9);
+     }
+
+ #services .box p{
+font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+ /* clients section  */
+
+#client-section{
+/* height: 344px; */
+position: relative;
+}
+
+.client-section::before{
+    content: "";
+    position: absolute;
+    background: url('clientfood1.jpg');
+    width: 100%;
+    height: 60%;
+    z-index: -1;
+    opacity: 0.4;
+   
+    }
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+    height: 130px;
+
+    transition: transform 0.3s ease-in-out;
+}
+#clients img:hover{
+    transform: scale(0.9);
+ }
+.client-item{
+    padding: 24px;
+}
+
+/* contact section  */
+#contact{
+position: relative;
+}
+
+#contact::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.7;
+background:url('contact.jpg') no-repeat center center/cover;
+
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input{
+ border-radius: 5px;
+ padding-left: 7px;
+ padding-top: 7px;
+ padding-bottom: 7px;
+ width: 70%;
+ height: 40%;
+}
+
+#contact-box textarea{
+    width: 70%;
+    padding: 0.5rem;
+border-radius: 15px;
+font-size: 1.1rem;
+
+}
+
+#contact-box form{
+    width: 40%;
+
+}
+#contact-box input::placeholder{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 0.5;
+    color: #f28057;
+   
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* utility classes  */
+.h-primary{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.8rem;
+    padding: -3px;
+     
+}
+.h-secondary{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8rem;
+    padding: 12px;
+     
+}
+.btn{
+    padding: 5px 28px;
+    border: 2px solid rgb(93 86 86);
+    background-color: #5a5857;
+    color: #fffbfb;
+    margin: 20px;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0  5px;
+    
+}
+#home .btn:hover{
+  text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+  transition-duration: 200ms;
+}
+
+.center{
+    text-align: center;
+}
